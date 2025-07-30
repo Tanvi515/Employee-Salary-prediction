@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+from utils import preprocess_data
 
 st.title("Salary Predictor")
 
