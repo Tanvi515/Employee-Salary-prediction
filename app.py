@@ -27,7 +27,7 @@ if st.button("Predict Salary"):
     }])
 
     model = joblib.load("model.pkl")
-    full_df = pd.read_csv("survey_results.csv")
+    full_df = pd.read_csv("salaries.csv")
     full_df = pd.concat([full_df, input_df], ignore_index=True)
     processed = preprocess_data(full_df)
     pred_input = processed.iloc[-1:].drop(columns=["salary_in_usd"], errors="ignore")
